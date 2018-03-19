@@ -1,0 +1,308 @@
+//alinea A
+function funcA() {
+    console.log("olá mundo")
+}
+
+//alinea B
+function funcB() {
+    let name = prompt("escreva o seu nome")
+    console.log("olá " + name + "!")
+}
+
+//alinea C
+//multiplicação do valor dos lados de um retangulo
+
+//INTERAÇÃO COM UTILIZADOR
+function funcC() {
+    let a = prompt("escreva o comprimento do 1º lado")   //abre uma janela prompt e pede para o usuario inserir um valor
+    let b = prompt("escreva o comprimento do 2º lado")
+    let area = areaRetangulo(a, b)
+
+    console.log("A area do retangulo é " + area)   //escreve na consola
+}
+
+
+//PROCESSAMENTO
+function areaRetangulo(a, b) {
+    return a * b;
+}
+
+//alinea D
+//operações aritmeticas
+
+function funcD() {
+    let num1 = parseInt(prompt("escreva um valor"))
+    let num2 = parseInt(prompt("escreva outro valor"))
+    let oper = prompt("Digite o operador")
+    let result
+
+    switch (oper) {
+        case "+": result = num1 + num2; break
+        case "-": result = num1 - num2; break
+        case "*": result = num1 * num2; break
+        case "/": result = num1 / num2; break
+        default: console.log("Operador Inválido"); break;
+    }
+
+    if (result != undefined) {
+        console.log("o resultado é " + result)
+    }
+
+}
+
+function funcE() {
+    /* Calcule o IMC */
+
+    let alt = parseFloat(prompt("escreva sua altura"))
+    let peso = parseFloat(prompt("escreva seu peso"))
+
+
+    let imc = peso / (alt * alt)
+
+    if (imc < 18.5) {
+        console.log("vc esta abaixo do peso")
+    }
+    else if ((imc >= 18.5) && (imc <= 24.9)) {
+        console.log("seu peso eh normal")
+    }
+    else if ((imc >= 24.9) && (imc <= 29.9)) {
+        console.log("sobrepeso")
+    }
+    else if ((imc >= 30) && (imc <= 34.9)) {
+        console.log("obeso")
+    }
+    else if ((imc >= 35) && (imc <= 39.9)) {
+        console.log("obeso ||")
+    }
+    else if (imc >= 40) {
+        console.log("obeso morbido")
+    }
+}
+
+function funcF() {
+    /* Crie uma função que simule um eco. Dada uma string S e um número N
+    deve devolver S escrito N vezes */
+
+    let n = parseInt(prompt("digite um numero"))
+    let s = "S"
+
+    for (let i = 0; i < n; i++) {
+        console.log(s)
+    }
+}
+
+function funcG() {
+    //contruir o intervalo:  a <= x < b
+
+    let a = parseInt(prompt("digite um numero"))
+    let b = parseInt(prompt("digite outro numero"))
+
+    if (a < b) {
+        for (let i = a; i < b; i++) {
+            console.log(i)
+        }
+    }
+    else if (a > b) {
+        for (let i = b; i < a; i++) {
+            console.log(i)
+        }
+    }
+}
+
+function funcH() {
+    /* Crie uma função que devolva a tabuada de um determinado número dado
+    pelo utilizador */
+
+    let num = parseInt(prompt("digite um numero"))
+
+    for (let i = 1; i < 11; i++) {
+        console.log(i + " x " + num + " : " + num * i)
+    }
+
+}
+
+function funcI() {
+    /* Elabore uma função que calcule a soma dos múltiplos de 3
+    existentes num intervalo [a,b], em que a e b são definidos
+    pelo utilizador.*/
+
+    let a = parseInt(prompt("digite um numero"))
+    let b = parseInt(prompt("digite outro numero"))
+    let result = 0
+
+    for (let i = a; i <= b; i++) {
+
+        if (i % 3 == 0) {
+            result = result + i
+        } 
+    }
+    console.log(result)
+}
+
+
+function funcJ() {
+/* Crie uma função que verifique se um número dado pelo utilizador é ou
+           não primo. */
+
+            let num = parseInt(prompt("digite um numero"))
+            var contador = 0
+
+            for (let i = 1; i <= num; i++) {
+                if (num % i == 0) {
+                    contador++
+                }
+            }
+            if (contador == 2) {
+                console.log("SIM")
+            } else {
+                console.log("NAO")
+            }
+
+
+        }
+
+function funcK() {
+/* Elabore uma função que calcule o fatorial de um valor inteiro positivo
+passado pelo utilizador. */
+
+            let num = parseInt(prompt("digite um numero"))
+            let factorial = 1
+
+            while (num >= 1) {
+                factorial = factorial * num
+                num--
+            }
+
+            console.log("O factorial é " + factorial);
+
+        }
+
+function funcL() {
+/* Crie uma função que verifique se um número é perfeito. */
+
+              
+              let num = parseInt(prompt("digite um numero"))
+              let result = 0
+
+              for (let i = 1; i < num; i++) {
+                if (num % i == 0) {
+
+                    result = result + i }
+                 }
+
+                if (num == result) {
+                    console.log("SIM")
+                } else {
+                    console.log("NAO")
+                }
+            
+            }
+
+
+function funcM() {
+//exceto anos múltiplos de 100 que não são múltiplos de 400
+
+   let num = parseInt(prompt("digite um numero"))
+
+      if (num % 4 == 0) {
+
+        if ((num % 100 != 0) || (num % 400 == 0)) {
+                    console.log("SIM")  }
+          } else {
+
+                console.log("NAO")
+            }  
+
+}
+
+
+function funcN() {
+/* Crie uma função que dado um número de 100 a 999 verifique se o mesmo
+é um número palíndromo (capicua) */
+
+  let num   
+           
+   do {
+       num = parseInt(prompt("Escreva um número"))
+        
+       if (num>=100 && num<=999) {
+            
+        let num1 = parseInt(num % 10)
+        let num2 = parseInt((num/10) % 10)
+        let num3 = parseInt((num/10) / 10)
+        let newNum = "" + num1 + num2 + num3            
+        
+          if (num.toString() == newNum) {
+                   console.log("SIM")
+            } else {
+                console.log("NÃO") }
+            } else {
+                console.log("Nº INVÁLIDO") }     
+            } while (num<100 || num>999);
+
+}
+
+
+function funcO() {
+/* Jogo do adivinha o numero */
+
+            var x = Math.floor((Math.random() * 100) + 1)   //numero aleatorio   
+            var tentativas = 0
+
+            let num = 0
+
+            while ((num != x) && (tentativas < 5)) {
+
+                num = parseInt(prompt("digite um numero"))
+                if (num < x) {
+                    console.log("Maior!")
+                } else if (num > x) {
+
+                    console.log("Menor!")
+                }
+                tentativas++
+            }
+            if (num == x) {
+                console.log("Parabens, acertou!")
+            } else {
+                console.log("Paciencia, jogue outra vez!")
+            }
+}
+
+function funcP() {
+            /* o programa le o maior e menor numero inserido pelo usuario*/
+
+            var contador = 0
+            var num = 0
+            var maior = 0
+            var maior = 0
+
+            for (let i = 0; i < 10; i++) {
+                num = parseInt(prompt("digite um numero"))
+
+                if (contador == 0) {
+                    maior = num
+                }
+                else {
+                    if (num > maior) {
+                        maior = num
+                    }
+                }
+
+                if (contador == 0) {
+                    menor = num
+                } else {
+                    if (num < menor) {
+                        menor = num
+                    }
+                } contador++
+            }
+
+
+            console.log("o maior eh " + maior)
+            console.log("o menor eh " + menor)
+
+}
+    
+
+
