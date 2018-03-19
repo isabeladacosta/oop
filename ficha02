@@ -1,0 +1,300 @@
+function funcA () {
+  /* Escreva uma função que receba um array numérico e que devolva a média
+  dos seus elementos */
+  
+  let numeros = [7, 3, 6, 12, 5] 
+  let soma = 0
+
+  for (let i = 0; i < numeros.length; i++) {
+      soma = soma + numeros[i]   
+  }
+
+  let media = soma / numeros.length
+  console.log("a media eh " + media)
+  
+}
+
+function funcB () {
+ /* Escreva uma função que receba um array numérico e que devolva o seu
+    menor elemento */
+
+    let numeros = [7, 3, 6, 12, 5]  
+    let contador = 0
+    let menos = 0
+    let num = 0
+
+for (let i = 0; i < numeros.length; i++) {
+      
+    num = numeros[i]   
+     
+      if (contador == 0) {
+        menor = num
+      } else {
+        if (num < menor) {
+            menor = num
+        }
+    } contador++
+
+  }
+
+  console.log("o menor eh " + menor)
+    
+}
+
+function funcC () { 
+/* Escreva uma função que receba um array numérico e um valor numérico N
+   e que devolva o mesmo array sem as ocorrências do valor N  */
+
+    let numeros = [7, 3, 6, 12, 5, 3, 67, 54, 9, 3, 8, 3, 0]  
+    
+    function checkNumero(numero) {
+        return numero != 3;
+    }
+   
+    console.log(numeros.filter(checkNumero));
+
+     
+}
+
+function funcD () {
+/* Escreva uma função que receba um array e que devolva uma string com
+todos elementos concatenados; */
+
+
+    let cores =  ["Vermelho", "Verde", "Branco", "Preto"]
+    let newcores = cores[0] + cores[1] + cores[2] + cores[3]
+    newcores.toString()
+
+    console.log(newcores)
+    
+}
+
+function funcE () {
+/* Escreva uma função que receba um array de strings e que devolva o
+mesmo array ordenado alfabeticamente; */
+  
+let cores =  ["Vermelho", "Verde", "Branco", "Preto"]
+let newcores = cores.sort() 
+console.log(newcores)
+
+}
+
+function funcF () {
+/* Escreva uma função que receba um array de strings 
+que devolva o mesmo array ordenado decrescentemente */
+
+  let cores =  ["Vermelho", "Verde", "Branco", "Preto"]
+  cores.sort()
+  cores.reverse()
+  console.log(cores)
+
+}
+
+function funcG () {
+/* Escreva uma função que receba um array de strings e 
+que devolva a string maior (com mais caracteres) */
+   
+  let cores =  ["Vermelho", "Verde", "Branco", "Preto"]
+   
+  let maior = 0
+  let maiorString = ""
+
+  for (let i = 0; i < cores.length; i++) {
+
+    let nChars = cores[i].length
+    if (nChars > maior)
+     {
+         maior = nChars
+         maiorString = cores[i]
+     }
+  }
+  
+  console.log(maiorString)
+   
+}
+
+function funcH () {
+/* Escreva uma função que receba um array de strings e uma string S e que
+   devolva o número de ocorrências da string S no array  */
+
+   let cores =  ["Vermelho", "Verde", "Branco", "S", "S", "S", "Preto"]
+   var contador = 0
+   var x = "S"
+
+   for (let i = 0; i < cores.length; i++) {
+      if (cores[i] == x)
+      {
+          contador++
+      }}
+
+   console.log(contador)
+
+} 
+
+function funcI () {
+/* Escreva uma função que receba um array com duas strings (password e
+sua confirmação) e que devolva 0 caso elas sejam diferentes ou 1 caso
+sejam iguais */
+
+   let cores =  ["Vermelho", "Vermelho"]
+
+   if (cores[0] == cores[1])
+   {
+     console.log("1")
+   }  else  { console.log("0")}
+
+}
+
+function funcJ () {
+/* Escreva uma função que receba um array e um valor P e devolva o elemento
+   do array na posição P */
+   
+   let cores =  ["Vermelho", "Verde", "Branco", "P", "S", "Preto"]
+   var a = cores.indexOf("P");
+   let x = "X"
+   cores[a] = x
+   console.log(cores)
+
+}
+
+function funcK () {
+/* Escreva uma função que receba um valor numérico N e que devolva um
+   array com todos os números positivos até N (exclusive) */
+
+  let numN = parseInt(prompt("digite um numero"))
+  
+  let arrayN = new Array ()
+
+  for (let i = 0; i < numN; i++)
+  {
+    arrayN.push(i)
+  }
+
+    console.log(arrayN)
+}
+
+function funcL () {
+/* Escreva uma função que receba um array e que devolva um novo array
+   apenas com os números pares do array original */
+
+   let num1 = parseInt(prompt("digite um numero"))
+   let num2 = parseInt(prompt("digite um numero"))
+   let num3 = parseInt(prompt("digite um numero"))
+   let num4 = parseInt(prompt("digite um numero"))
+
+   let arrayN = [num1, num2, num3, num4]
+   
+   function checkNumero(numero) {
+
+         return numero % 2 == 0
+    }
+
+   console.log(arrayN.filter(checkNumero));
+
+
+}
+
+function funcM () {
+/*  Escreva uma função que receba um array e que devolva o mesmo array com
+    todos os seus valores incrementados de 1 unidade */
+
+    var numbers = [65, 44, 12, 4];
+
+    function addArrayElement(num) {
+         return num + 1
+    }
+
+     console.log(numbers.map(addArrayElement))
+
+}
+
+function funcN () {
+/* Escreva uma função que receba dois arrays com valores individuais, e
+   que devolva um novo array com a soma de cada valor de índice individual
+   a partir dos arrays originais.
+   Input arrays:
+   array1 = [1,0,2,3,4];
+   array2 = [3,5,6,7,8,13];
+   Output esperado: [4, 5, 8, 10, 12, 13] */
+
+  let array1 = [1,0,2,3,4]
+  let array2 = [3,5,6,7,8,13]
+  let newArray = new Array ()
+
+  if (array1.length < array2.length) {
+      array1.length = array2.length
+  }
+
+  for (let i = 0; i < array2.length; i++)
+  {
+      if (array1[i] == undefined) {
+          array1[i] = 0
+
+      } else if (array2[i] == undefined) {
+           array2[i] = 0
+      }
+
+    newArray.push(array1[i] + array2[i])
+  }
+   
+   console.log(newArray)
+  
+}
+
+function funcO () {
+/* Escreva um programa que inclua um metodo que receba um arraz num formato
+   de origem e devolva outro array com um formato de destino.
+   Ex. 5 do TESTE1!!! */
+
+    //Dados introduzidos pelo usuario
+
+    let num1 = parseInt(prompt("digite um numero"))
+    let let1 = prompt("digite uma letra")
+    let num2 = parseInt(prompt("digite um numero"))
+    let let2 = prompt("digite uma letra")
+    let num3 = parseInt(prompt("digite um numero"))
+    let let3 = prompt("digite uma letra")
+ 
+    let array1= [num1, let1, num2, let2, num3, let3]    
+
+    let newArray = new Array ()
+    
+    for (let i = 0; i < array1[0] ; i++) {
+        newArray.push(array1[1])
+    } 
+
+    for (let i = 0; i < array1[2] ; i++) {
+        newArray.push(array1[3])
+    }
+
+    for (let i = 0; i < array1[4] ; i++) {
+        newArray.push(array1[5])
+    }
+
+    console.log(newArray)
+
+    /*
+    //Dados introduzidos por mim
+
+    let array1 = [3 , "s" , 0 , "a" , 2 , "c"]
+    let newArray = new Array ()
+ 
+
+    for (let i = 0; i < array1[0] ; i++) {
+        newArray.push(array1[1])
+    } 
+
+    for (let i = 0; i < array1[2] ; i++) {
+        newArray.push(array1[3])
+    }
+
+    for (let i = 0; i < array1[4] ; i++) {
+        newArray.push(array1[5])
+    }
+
+    console.log(newArray)
+   */
+
+}
+
+
