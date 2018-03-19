@@ -1,0 +1,163 @@
+let show = function(value) {
+    let areaTexto = document.querySelector("#caixaTexto")
+    areaTexto.innerHTML += value + "\n"
+}
+
+/* Considere o próximo objeto literal:
+
+   let student = {
+   name: "David Silva",
+   course: "POO",
+   grade: 12
+   }
+
+i. Crie uma função para listar os nomes das propriedades do objeto
+ii. Crie uma função que remova a propriedade grade do objeto. Imprima
+o objeto antes e depois de remover a propriedade
+iii. Crie uma função que calcule o tamanho do objeto  */
+
+function funcA() {
+    let resultado1 = Ai()
+    show("A.i -> " + resultado1 + "\n")
+    let resultado2 = Aii()
+    show("A.ii -> " + resultado2 + "\n")
+    let resultado3 = Aiii()
+    show("A.iii -> " + resultado3 + "\n")
+}
+
+  let student = {
+      name: "David Silva",
+      course: "POO",
+      grade: 12
+      }
+ 
+function Ai() {
+
+  let resultado = ""
+  for (p in student)
+  {
+     resultado += p + "\n"
+  }
+    
+    return(resultado)
+
+} 
+
+function Aii() {
+
+  let resultadoAntes = ""
+
+  for (p in student)
+  {
+     resultadoAntes += p + ": " + student[p] + "\n"
+  }
+    
+  let resultadoDepois = ""
+  delete student.grade
+  
+  for (p in student)
+  {
+     resultadoDepois += p + ": " + student[p] + "\n"
+  }
+
+  return(resultadoAntes + "\n" + resultadoDepois)
+
+   
+}
+
+function Aiii() {
+
+    let resultado = ""
+    let contador = 0
+
+    for (p in student)
+    {
+       contador++
+    }
+      
+     resultado = contador
+
+     return(resultado + 1)
+    // return(Object.keys(student).length + 1) TBM FUNCIONA
+
+}
+
+/*Crie o próximo objeto literal:
+let grades = [
+ {
+ name: 'Rui',
+ grade: 8
+ },
+ {
+ name: 'Ana',
+ grade: 12
+ },
+ {
+ name: 'Carla',
+ grade: 14
+ }] 
+
+i. Crie função que crie um novo objeto (com dados do utilizador) e
+insira os mesmos no array
+ii. Crie uma função que calcule a média das notas a POO
+iii. Crie função que liste os nomes dos estudantes com nota positiva */
+
+function funcB() {
+    let resultado1 = Bi()
+    show("B.i -> " + resultado1 + "\n")
+    let resultado2 = Bii()
+    show("B.ii -> " + resultado2 + "\n")
+    let resultado3 = Biii()
+    show("B.iii -> " + resultado3 + "\n")
+}
+
+function Bi() {
+
+    let resultado = ""
+
+    let grades =  new Array ()
+    let gradesOBJS = new Object()
+
+    for (let i = 0; i <= 2; i++)
+    {
+        gradesOBJS.name = prompt("Digite o nome do aluno")
+        gradesOBJS.grade = parseInt(prompt("Digite a nota"))
+
+      grades.push(gradesOBJS)
+      
+       for (j in gradesOBJS)
+       {
+         resultado += j + ": " + gradesOBJS[j] + "\n"
+       }
+     
+    } 
+
+    return(resultado)
+
+    //function Bii() {
+        //NAO FUNCIONA
+    
+        let numeros = [gradesOBJS.grade[0], gradesOBJS.grade[1], gradesOBJS.grade[2]] 
+        let soma = 0
+      
+        for (let i = 0; i < numeros.length; i++) {
+            soma = soma + numeros[i]   
+        }
+      
+        let media = soma / numeros.length
+        console.log("a media eh " + media)
+
+   // }
+
+}
+
+
+function Bii() {
+
+    
+}
+
+
+function Biii() {
+    
+}
