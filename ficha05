@@ -1,0 +1,58 @@
+//EXERCICIO 1
+//FALTA G E H
+
+class Retangulo {
+    constructor(largura = 1, altura = 1) {
+        this.largura = largura
+        this.altura = altura
+        this._cor = "branco"
+    }
+
+    //Propriedade largura (set e get)
+    get largura() {
+        return this._largura
+    }
+
+    set largura(value) {
+        this._largura = value
+    }
+
+    //Propriedade altura (set e get)
+    get altura() {
+        return this._altura
+    }
+
+    set altura(value) {
+        this._altura = value
+    }
+
+     //Propriedade cor (get)
+     get cor() {
+        return this._cor
+    }
+
+
+    //Metodo para calcular a area de um retangulo
+    getArea() {
+        return this._altura * this._largura
+    }
+
+    //Metodo para calcular o perimetro de um retangulo
+     getPerimetro() {
+        return 2 * this._altura + 2 * this._largura
+    }
+
+
+}
+
+
+
+let meuRetangulo1 = new Retangulo(4,5)
+console.log(meuRetangulo1.largura)
+console.log(meuRetangulo1.altura)
+console.log(meuRetangulo1.getArea())
+console.log(meuRetangulo1.getPerimetro())
+
+
+//let meuRetangulo2 = new Retangulo()
+//console.log(meuRetangulo2.largura)
