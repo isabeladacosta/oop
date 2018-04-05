@@ -219,8 +219,6 @@ function funcM() {
 function funcN() {
 /* Crie uma função que dado um número de 100 a 999 verifique se o mesmo
 é um número palíndromo (capicua) */
-
-  let num   
            
    do {
        num = parseInt(prompt("Escreva um número"))
@@ -246,9 +244,8 @@ function funcN() {
 function funcO() {
 /* Jogo do adivinha o numero */
 
-            var x = Math.floor((Math.random() * 100) + 1)   //numero aleatorio   
+            var x = Math.floor((Math.random() * 100) + 1)   //numero aleatorio
             var tentativas = 0
-
             let num = 0
 
             while ((num != x) && (tentativas < 5)) {
@@ -266,7 +263,7 @@ function funcO() {
                 console.log("Parabens, acertou!")
             } else {
                 console.log("Paciencia, jogue outra vez!")
-            }
+            } 
 }
 
 function funcP() {
@@ -303,6 +300,24 @@ function funcP() {
             console.log("o menor eh " + menor)
 
 }
+
+function funcQ() {
+    //SEQUENCIA FIBONACCI 
+
+    let a = 0
+    let b = 1
+    let resultado = b
+    let num = parseInt(prompt("digite um numero"))
+
+    console.log(a)
+    console.log(b)
     
-
-
+    for (let i = 1; i < num; i++) {
+        resultado = a + b
+        a = b
+        b = resultado
+        console.log(resultado)
+    }
+    
+}
+    
