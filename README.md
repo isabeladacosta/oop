@@ -1,3 +1,3 @@
 # OOP
 
-Object Oriented Programming in JavaScript Exercices
+Exercices on Object Oriented Programming in JavaScript
