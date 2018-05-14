@@ -1,3 +1,3 @@
-# POO
+# OOP
 
-Exercicios de Programação Orientada a Objetos
+Object Oriented Programming in JavaScript Exercices
