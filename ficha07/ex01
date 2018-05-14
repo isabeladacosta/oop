@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXERCICIO 01 - Ficha 07</title>
+    <script src="ex01.js"></script>
+</head>
+<body>
+        <form id="meufrm">
+                <label for="eml"> Email: <input type="email" id="eml" required><br><br>
+                <label for="pass"> Password: <input type="password" id="pass" minlength="7" maxlength="10" required><br><br>
+                <input type="submit" value="submeter">
+                <input type="reset" value="limpeza">
+         </form>
+
+</body>
+</html>
+
