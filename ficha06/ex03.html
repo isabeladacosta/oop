@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EX 03</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <!-- Custom js -->
+    <script src="ex03.js"></script>
+</head>
+<body>
+
+        <div class="container">
+        
+                <!-- Cabecalho -->
+                <div class="jumbotron">
+                    <h1 class="display-3">Meus Filmes</h1>
+                    <p class="lead">Organiza Filmes</p>
+                    <hr class="my-2">
+        
+                    <!-- Inicio do Form -->
+                    <form id="meuform">
+                     <div class="form-row">
+                             <div class="form-group col-md-6">
+        
+                                 <!-- Nome do jogo -->
+                                 <label for="nome">Name</label>
+                                 <input type="text" class="form-control" id="nome" maxlength="50" required autofocus>
+                             </div>                    
+                             <div class="form-group col-md-6">
+        
+                                <!-- Ano -->
+                                <label for="nome">Ano</label>
+                                <input type="number" class="form-control" id="ano" min="1900" max="2018" required autofocus>
+                            </div>                    
+                            <div class="form-group col-md-6">
+
+                                 <!-- Genero do jogo -->
+                                 <label for="genero">Genre</label>
+                                 <select id="genero" class="form-control" required>                            
+                                     <option value="Action">Action</option>
+                                     <option value="Terror">Terror</option>
+                                     <option value="Romance">Romance</option>
+                                     <option value="Comedia">Comedia</option>
+                                     <option value="Documentarios">Documentario</option>
+                                 </select>
+                             </div>
+                         </div>
+                         <div class="form-row">
+                             <div class="form-group col-md-12">
+        
+                                 
+                         <!-- Buttons-->
+                         <div class="form-row">
+                             <div class="form-group col-md-12">
+                                 <!-- Adicionar Jogo-->
+                                 <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                             </div>
+                         </div>
+             </form>
+        
+             <!-- Tabela -->
+             <div class="table-responsive">
+                    <table id="tabela" class="table table-sm">            
+                    </table>
+                </div>
+               </div>
+            </div>
+        
+
+
+    
+   <!-- Tabela -->
+    <table id="tabela">
+    </table>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+</html>
