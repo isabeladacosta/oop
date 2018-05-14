@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXERCICIO 02 - Ficha 07</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+    <script src="ex02.js"></script>
+<body>
+     <form autocomplete="on" id="meufrm">
+            <label for="nome"> Nome: <input type="text" id="nome" maxlength="50" placeholder="Primeiro e Ultimo nome" required autofocus><br><br>
+            <label for="mora"> Morada: <input type="text" id="mora"><br><br>
+            <label for="cp1"> Codigo-Postal: <input type="text" id="cp1" size="4" maxlength="4"> <input type="text" id="cp2" size="3" maxlength="3"><br><br> 
+            <label for="telem">Telemovel: <input type="tel" id="telem" maxlength="8" required><br><br>
+            <label for="nasc"> Data de Nascimento: <input type="date" id="nasc" max="2018-04-02"><br><br>
+            <label for="lcl"> Localidade: <input id="lcl" list="local">
+                            <datalist id="local">
+                             <option value="Porto">
+                             <option value="Lisboa">
+                             <option value="Coimbra">
+                             <option value="Aveiro">
+                             <option value="Vila do Conde">
+                            </datalist><br><br>
+            <label for="sx"> Sexo: <br> <input type="radio" id="sx" name="sexo" value="M"> M<br>
+            <input type="radio" name="sexo" value="F"> F <br>
+            <input type="radio" name="sexo" value="outro"> Outro
+            <br><br>
+            <label for="eml"> Email: <input type="email" id="eml" accesskey="w" required><br><br>
+            <label for="user"> User:  <input type="text" id="user" required autocomplete="off"><br><br>
+            <label for="pass1"> Password: <input type="password" id="pass1" required autocomplete="off"><br><br>
+            <label for="pass2"> Confirmar Password: <input type="password" id="pass2" required autocomplete="off"><br><br>
+            <label for="cms"> Tamanho de Camisola: <br> <input type="radio" id="cms" name="camisa" value="S"> S<br>
+            <input type="radio" name="camisa" value="M"> M <br>
+            <input type="radio" name="camisa" value="L"> L <br>
+            <input type="radio" name="camisa" value="XL"> XL 
+            <br><br>
+            <label for="pagp"> Pagina Pessoal: <input type="url" id="pagp"> <br><br>
+            <label for="sap">Nº da sapatilha: <input type="number" id="sap" min="30" max="50"> <br><br>
+            <label for="desp"> Principais desportos praticados: <input id="desp" list="desporto">
+            <datalist id="desporto">
+             <option value="Running">
+             <option value="Natacao">
+             <option value="Futebol">
+             <option value="Volei">
+             <option value="Outros">
+            </datalist><br><br>
+            <label for="caixaTexto"> Observacoes: <br> <textarea id="caixaTexto" cols="30" rows="10"></textarea><br><br>
+            <input type="submit" value="submeter">
+        </form>
+</body>
+</html>
